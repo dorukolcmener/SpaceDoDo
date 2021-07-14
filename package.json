@@ -1,0 +1,19 @@
+{
+  "name": "spaceplayground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.35.2"
+  },
+  "author": {
+    "name": "dorukolcmener"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "dependencies": {
+    "three": "^0.130.1"
+  }
+}
