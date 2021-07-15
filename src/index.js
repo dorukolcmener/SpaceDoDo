@@ -52,7 +52,7 @@ function animate() {
     earth.planet.position.z + moonR2 * Math.sin(totalTime * 5)
   );
   //Rotate Sun
-  sun.planet.rotation.y = -totalTime / 5;
+  sun.planet.rotation.y = -totalTime;
   requestAnimationFrame(animate);
 
   renderer.render(scene, camera);
