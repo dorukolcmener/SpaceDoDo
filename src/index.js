@@ -47,9 +47,9 @@ function animate() {
   let moonR1 = 15;
   let moonR2 = moonR1 * 1.5;
   moon.planet.position.set(
-    earth.planet.position.x + moonR1 * Math.cos(totalTime * 5),
+    earth.planet.position.x + moonR1 * Math.cos(totalTime * 8),
     0,
-    earth.planet.position.z + moonR2 * Math.sin(totalTime * 5)
+    earth.planet.position.z + moonR2 * Math.sin(totalTime * 8)
   );
   //Rotate Sun
   sun.planet.rotation.y = -totalTime;
