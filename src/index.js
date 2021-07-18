@@ -1,4 +1,4 @@
-import { camera, renderer, scene } from "./initialize";
+import { camera, renderer, scene, rps } from "./initialize";
 import { PointLight, TextureLoader, Clock } from "three";
 import Planet from "./components/Planet";
 
@@ -34,25 +34,28 @@ function animate() {
   let totalTime = ts.getElapsedTime();
   totalTime *= slowMo;
   //Rotate Earth
-  earth.planet.rotation.y = -totalTime * 20;
+  let earthRps = 4;
+  earth.planet.rotation.y = -rps(earthRps, totalTime);
   //Move Earth
   let earthR1 = 150;
   let earthR2 = earthR1 * 1.5;
   earth.planet.position.set(
-    earthR1 * Math.cos(totalTime),
+    earthR1 * Math.cos(rps((earthRps / 365) * 8, totalTime)),
     0,
-    earthR2 * Math.sin(totalTime)
+    earthR2 * Math.sin(rps((earthRps / 365) * 8, totalTime))
   );
   //Move Moon
   let moonR1 = 15;
   let moonR2 = moonR1 * 1;
   moon.planet.position.set(
-    earth.planet.position.x + moonR1 * Math.cos(totalTime * 12),
+    earth.planet.position.x +
+      moonR1 * Math.cos(rps((earthRps / 30) * 8, totalTime)),
     0,
-    earth.planet.position.z + moonR2 * Math.sin(totalTime * 12)
+    earth.planet.position.z +
+      moonR2 * Math.sin(rps((earthRps / 30) * 8, totalTime))
   );
   //Rotate Sun
-  sun.planet.rotation.y = -totalTime;
+  sun.planet.rotation.y = -rps(earthRps * 0.05, totalTime);
   requestAnimationFrame(animate);
 
   renderer.render(scene, camera);

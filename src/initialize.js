@@ -40,4 +40,9 @@ window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-module.exports = { camera, controls, renderer, scene };
+// Round Per Second
+function rps(n, totalTime) {
+  return 2 * Math.PI * n * totalTime;
+}
+
+module.exports = { camera, controls, renderer, scene, rps };
