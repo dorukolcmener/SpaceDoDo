@@ -34,7 +34,7 @@ function animate() {
   let totalTime = ts.getElapsedTime();
   totalTime *= slowMo;
   //Rotate Earth
-  earth.planet.rotation.y = -totalTime * 15;
+  earth.planet.rotation.y = -totalTime * 20;
   //Move Earth
   let earthR1 = 150;
   let earthR2 = earthR1 * 1.5;
@@ -45,11 +45,11 @@ function animate() {
   );
   //Move Moon
   let moonR1 = 15;
-  let moonR2 = moonR1 * 1.5;
+  let moonR2 = moonR1 * 1;
   moon.planet.position.set(
-    earth.planet.position.x + moonR1 * Math.cos(totalTime * 8),
+    earth.planet.position.x + moonR1 * Math.cos(totalTime * 12),
     0,
-    earth.planet.position.z + moonR2 * Math.sin(totalTime * 8)
+    earth.planet.position.z + moonR2 * Math.sin(totalTime * 12)
   );
   //Rotate Sun
   sun.planet.rotation.y = -totalTime;
