@@ -36,7 +36,7 @@ const earthR1 = 150;
 const moonR1 = 15;
 
 function animate() {
-  let totalTime = ts.getElapsedTime();
+  let totalTime = ts.getElapsedTime() + 68;
   totalTime *= slowMo;
 
   earth.rotate({ n: earthRps, time: totalTime });

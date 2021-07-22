@@ -22,7 +22,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-camera.position.set(0, 0, 250);
+camera.position.set(0, 0, 260);
 controls.update();
 
 window.addEventListener("resize", () => {
