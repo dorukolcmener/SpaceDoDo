@@ -1,5 +1,5 @@
 import { camera, renderer, scene } from "./initialize";
-import { PointLight, TextureLoader, Clock } from "three";
+import { PointLight, TextureLoader, Clock, HemisphereLight } from "three";
 import Planet from "./components/Planet";
 
 const earth = new Planet({
@@ -22,11 +22,12 @@ const sun = new Planet({
 sun.planet.position.set(0, 0, 0);
 scene.add(sun.planet);
 
-const light = new PointLight("#fdfbd3", 2, 1000);
-light.position.set(0, 0, 0);
-scene.add(light);
+const pLight = new PointLight("#fdfbd3", 2, 1000);
+pLight.position.set(0, 0, 0);
+scene.add(pLight);
 
-camera.rotation.z = Math.PI / 15;
+const hLight = new HemisphereLight(null, null, 0.15);
+scene.add(hLight);
 
 // Animation Constants
 let ts = new Clock(true);
@@ -36,7 +37,7 @@ const earthR1 = 150;
 const moonR1 = 15;
 
 function animate() {
-  let totalTime = ts.getElapsedTime() + 68;
+  let totalTime = ts.getElapsedTime() + 0;
   totalTime *= slowMo;
 
   earth.rotate({ n: earthRps, time: totalTime });

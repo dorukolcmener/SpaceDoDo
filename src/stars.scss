@@ -1,0 +1,32 @@
+@use "sass:math";
+
+.stars {
+  z-index: -1;
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  .star {
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+    animation: shine 2s infinite;
+    @for $i from 0 through 99 {
+      &.star_#{$i} {
+        left: unquote(random(100) + "%");
+        top: unquote(random(100) + "%");
+        animation-delay: math.div(random(100), 100) * 5 + s;
+      }
+    }
+  }
+}
+
+@keyframes shine {
+  50% {
+    opacity: 0.3;
+  }
+}
