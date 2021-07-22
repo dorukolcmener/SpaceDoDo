@@ -5,7 +5,6 @@ import {
   BoxGeometry,
   MeshBasicMaterial,
   Mesh,
-  AxesHelper,
 } from "three";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -31,8 +30,6 @@ scene.add(cube);
 
 camera.position.set(0, 0, 250);
 controls.update();
-
-// scene.add(new AxesHelper(1000));
 
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
