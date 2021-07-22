@@ -22,12 +22,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-
-const geometry = new BoxGeometry();
-const material = new MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
-const cube = new Mesh(geometry, material);
-scene.add(cube);
-
 camera.position.set(0, 0, 250);
 controls.update();
 
