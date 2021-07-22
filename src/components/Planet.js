@@ -36,4 +36,19 @@ export default class Planet {
         });
     this.planet = new Mesh(this.planetGeometry, this.planetMaterial);
   }
+  move({ n, r1, r2, time, relative = null }) {
+    let x =
+      (relative ? relative.planet.position.x : 0) + r1 * Math.cos(rps(n, time));
+    let z =
+      (relative ? relative.planet.position.z : 0) + r2 * Math.sin(rps(n, time));
+    this.planet.position.set(x, 0, z);
+  }
+  rotate({ n, time }) {
+    this.planet.rotation.y = -rps(n, time);
+  }
+}
+
+// Round Per Second
+function rps(n, totalTime) {
+  return 2 * Math.PI * n * totalTime;
 }
