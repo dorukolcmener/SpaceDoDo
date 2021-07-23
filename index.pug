@@ -8,8 +8,6 @@ head
   link(rel='stylesheet' href='./src/stars.scss')
 body 
     .stars
-        -var n = 100;
-        -var i = 0; 
-        while i < n
-            div(class="star star_"+i++)
+        each i of [...Array(100).keys()]
+            div(class="star star_"+i)
     script(src='./src/index.js')
