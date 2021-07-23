@@ -15,7 +15,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-camera.position.set(0, 0, 310);
+camera.position.set(0, 0, 350);
 controls.update();
 camera.rotation.set(0, 0, Math.PI / 15);
 

@@ -1,4 +1,7 @@
 @use "sass:math";
+@use "sass:list";
+
+$colors: #afc9ff, #c7d8ff, #fff4f3, #ffe5cf, #ffd9b2, #ffc78e, #ffa651;
 
 .stars {
   z-index: -1;
@@ -14,12 +17,13 @@
     border-radius: 100%;
     background-color: #fff;
     position: absolute;
-    animation: shine 2s infinite;
+    animation: shine 1.5s infinite;
     @for $i from 0 through 99 {
       &.star_#{$i} {
         left: unquote(random(100) + "%");
         top: unquote(random(100) + "%");
         animation-delay: math.div(random(100), 100) * 5 + s;
+        background-color: list.nth($colors, $i % 7 + 1);
       }
     }
   }
@@ -27,6 +31,6 @@
 
 @keyframes shine {
   50% {
-    opacity: 0.3;
+    opacity: 0.2;
   }
 }

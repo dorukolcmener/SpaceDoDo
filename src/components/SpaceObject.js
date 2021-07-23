@@ -5,7 +5,7 @@ import {
   MeshBasicMaterial,
 } from "three";
 
-export default class Planet {
+export default class SpaceObject {
   constructor({
     color = "white",
     dithering = true,
