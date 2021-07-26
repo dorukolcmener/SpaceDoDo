@@ -1,20 +1,31 @@
 {
   "name": "spacedodo",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "pug": "^3.0.2",
-    "sass": "^1.35.2"
-  },
+  "version": "2.0.0",
+  "main": "build/index.html",
+  "repository": "https://github.com/dorukolcmener/SpaceDoDo.git",
   "author": {
-    "name": "dorukolcmener"
+    "name": "Doruk",
+    "email": "doruk.olcmener@gmail.com",
+    "url": "https://github.com/dorukolcmener/"
   },
-  "scripts": {
-    "start": "parcel index.pug"
-  },
+  "license": "MIT",
   "dependencies": {
     "three": "^0.130.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "2.0.0-beta.3.1",
+    "@parcel/transformer-pug": "2.0.0-beta.3.1",
+    "@parcel/transformer-sass": "2.0.0-beta.3.1",
+    "parcel": "^2.0.0-beta.3.1"
+  },
+  "scripts": {
+    "start": "parcel ./src/index.pug",
+    "build": "parcel build ./src/index.pug --public-url ./",
+    "clean": "rmdir /q /s .parcel-cache build dist"
+  },
+  "targets": {
+    "main": {
+      "sourceMap": false
+    }
   }
 }

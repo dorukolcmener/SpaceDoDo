@@ -1,6 +1,10 @@
 import { Scene, PerspectiveCamera, WebGLRenderer } from "three";
-
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import sunTextureUrl from "url:./assets/map-4818824_1280.jpg";
+import earthTextureUrl from "url:./assets/earth-11048_1280.jpg";
+import moonTextureUrl from "url:./assets/map-4818828_1280.jpg";
+import venusTextureUrl from "url:./assets/map-4818876_1280.jpg";
+import marsTextureUrl from "url:./assets/map-4818850_1280.jpg";
 
 const scene = new Scene();
 const camera = new PerspectiveCamera(
@@ -25,4 +29,11 @@ window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-module.exports = { camera, controls, renderer, scene };
+textures = {
+  sunTextureUrl,
+  earthTextureUrl,
+  moonTextureUrl,
+  venusTextureUrl,
+  marsTextureUrl,
+};
+module.exports = { camera, controls, renderer, scene, textures };

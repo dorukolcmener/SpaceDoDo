@@ -3,11 +3,11 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title SpaceDoDo
-  link(rel='stylesheet' href='./src/main.scss')
-  link(rel='stylesheet' href='./src/stars.scss')
+  title Space DoDo
+  link(rel='stylesheet' href='./styles/main.scss')
+  link(rel='stylesheet' href='./styles/stars.scss')
 body 
     .stars
         each i of [...Array(100).keys()]
             div(class="star star_"+i)
-    script(src='./src/index.js')
+    script(src='./index.js')

@@ -1,29 +1,29 @@
-import { camera, renderer, scene } from "./initialize";
+import { camera, renderer, scene, textures } from "./initialize";
 import { PointLight, TextureLoader, Clock, HemisphereLight } from "three";
 import SpaceObject from "./components/SpaceObject";
 
 const sun = new SpaceObject({
   radius: 30,
-  map: new TextureLoader().load("./assets/map-4818824_1280.jpg"),
+  map: new TextureLoader().load(textures.sunTextureUrl),
   sun: true,
 });
 scene.add(sun.planet);
 
 const earth = new SpaceObject({
   radius: 5,
-  map: new TextureLoader().load("./assets/earth-11048_1280.jpg"),
+  map: new TextureLoader().load(textures.earthTextureUrl),
 });
 scene.add(earth.planet);
 
 const moon = new SpaceObject({
   radius: 1,
-  map: new TextureLoader().load("./assets/map-4818828_1280.jpg"),
+  map: new TextureLoader().load(textures.moonTextureUrl),
 });
 scene.add(moon.planet);
 
 const venus = new SpaceObject({
   radius: 4,
-  map: new TextureLoader().load("./assets/map-4818876_1280.jpg"),
+  map: new TextureLoader().load(textures.venusTextureUrl),
 });
 scene.add(venus.planet);
 
@@ -36,7 +36,7 @@ scene.add(mercury.planet);
 const mars = new SpaceObject({
   radius: 3,
   color: "#BC2732",
-  map: new TextureLoader().load("./assets/map-4818850_1280.jpg"),
+  map: new TextureLoader().load(textures.marsTextureUrl),
 });
 scene.add(mars.planet);
 
