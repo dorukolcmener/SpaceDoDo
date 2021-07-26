@@ -1,4 +1,4 @@
-Project written with threejs, shows elliptic path and realistic rotation of 3D space objects. 
+Project written with threejs, shows elliptic path and rotation of 3D space objects. 
 Made it in order to demonstrate my basic knowledge of #oop, #threejs, #pug, #scss
 
 DEMO:
