@@ -23,17 +23,18 @@ camera.position.set(0, 0, 350);
 controls.update();
 camera.rotation.set(0, 0, Math.PI / 15);
 
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
-
-textures = {
+const textures = {
   sunTextureUrl,
   earthTextureUrl,
   moonTextureUrl,
   venusTextureUrl,
   marsTextureUrl,
 };
+
+window.addEventListener("resize", () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
 module.exports = { camera, controls, renderer, scene, textures };
