@@ -13,7 +13,6 @@ export default class SpaceObject {
     name = "planet",
     radius = 50,
     res = 50,
-    emissive = false,
     sun = false,
   }) {
     this.color = color;
@@ -26,13 +25,11 @@ export default class SpaceObject {
           color,
           dithering,
           map,
-          emissive,
         })
       : new MeshBasicMaterial({
           color,
           dithering,
           map,
-          emissive,
         });
     this.planet = new Mesh(this.planetGeometry, this.planetMaterial);
   }
