@@ -2,7 +2,7 @@ Project written with threejs, shows elliptic path and rotation of 3D space objec
 Made it for fun and it also demonstrates my basic knowledge of #oop, #threejs, #pug, #scss
 
 DEMO:
-https://dorukolcmener.github.io/SpaceDoDo/build/
+https://dorukolcmener.github.io/SpaceDoDo/
 
 Image Credits:
 Object textures (Sun, Earth, Moon, Mars, Venus) were found on Pixabay:
