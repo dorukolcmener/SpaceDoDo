@@ -13,5 +13,5 @@ https://pixabay.com/photos/earth-map-atlas-cartology-world-11048/
 https://pixabay.com/photos/map-mars-planet-red-desert-world-4818850/
 https://pixabay.com/photos/map-venus-planet-lava-fire-hot-4818876/
 
-## LICENSE
+## License
 [MIT](LICENSE)
